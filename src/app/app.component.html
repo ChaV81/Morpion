@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="d-flex justify-content-center align-items-center" style="height: 150px; background-color: #c27af5">
+      <h1>{{title}}</h1>
+    </div>
+</div>
+
+<app-home [style.display]="formVisibility" (sendRequestToFather)="letsPlay($event)"></app-home>
+
+<div [style.display]="gameVisibility" class="mt-5 d-flex justify-content-around">
+    <div [style.display]="gameVisibility" class="tailleGamer">Joueur O : {{gamerO?.getPseudo()}}</div>
+    <div [style.display]="gameVisibility" class="tailleGamer">Joueur X : {{gamerX?.getPseudo()}}</div>
+</div>
+<app-game [style.display]="gameVisibility"></app-game>
+
+
+<router-outlet></router-outlet>

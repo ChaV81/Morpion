@@ -1,0 +1,15 @@
+
+    <form class="w-50 m-auto mt-5">
+      <div class="mb-3 form-group">
+        <label for="inputO" class="form-label">Joueur O</label>
+        <input type="text" class="form-control" id="inputO" #inputO placeholder="Bob">
+      </div>
+      <div class="mb-3 form-group">
+        <label for="inputX" class="form-label">Joueur X</label>
+        <input type="text" class="form-control" id="inputX" #inputX placeholder="Alice">
+      </div>
+      <div class="mb-3">
+        <button (click)="onGame(inputO.value, inputX.value)" class="btn w-100" style="background-color: #c27af5">Let's go !</button>
+      </div>
+    </form>
+  
